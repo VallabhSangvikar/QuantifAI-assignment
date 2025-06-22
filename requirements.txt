@@ -10,3 +10,4 @@ pydantic
 typing
 streamlit 
 plotly
+jupyter
