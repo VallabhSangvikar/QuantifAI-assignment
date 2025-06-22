@@ -161,7 +161,7 @@ streamlit run dashboard.py
 | `db/create_tables.py` | Database schema creation |
 | `db/insert_cleaned_data.py` | Data insertion with validation |
 | `app/dashboard.py` | Main Streamlit dashboard application |
-| `utils/profiling.py` | Data profiling and quality assessment |
+| `utils/summarise.py` | Data summarise and quality assessment |
 | `reports/` | Generated PDF reports on data quality |
 | `notebooks/` | Jupyter notebooks for analysis and validation |
 
