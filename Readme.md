@@ -57,7 +57,7 @@ QUANTIFAI/
 
 1. **Clone the repository**
    ```bash
-   git clone 
+   git clone https://github.com/VallabhSangvikar/QuantifAI-assignment.git
    cd QUANTIFAI
    ```
 
