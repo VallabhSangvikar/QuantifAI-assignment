@@ -1,0 +1,12 @@
+python-dotenv
+langchain-google-genai
+google-generativeai
+langchain
+langchain-core
+numpy
+pandas
+fpdf
+pydantic
+typing
+streamlit 
+plotly
