@@ -58,7 +58,7 @@ QUANTIFAI/
 1. **Clone the repository**
    ```bash
    git clone https://github.com/VallabhSangvikar/QuantifAI-assignment.git
-   cd QUANTIFAI
+   cd QUANTIFAI-assignment
    ```
 
 2. **Create and activate virtual environment**
@@ -88,10 +88,10 @@ QUANTIFAI/
 ### Step 1: Data Analysis & Profiling
 ```bash
 # Run the Jupyter notebook for data exploration and profiling
-jupyter notebook notebooks/[main_analysis_notebook].ipynb
+jupyter notebook notebooks/llm_validation.ipynb
 ```
 This will:
-- Analyze raw datasets for quality issues
+- Analyze raw datasets for quality issues and use LLMs to find out the issues.
 - Generate comprehensive PDF reports in `reports/` directory
 - Create profiling summaries
 
@@ -128,50 +128,19 @@ streamlit run dashboard.py
 - **Interactive Q&A**: Ask custom questions about the data using AI
 - **Data Quality Metrics**: Review cleaning results and improvements
 
-## 📊 Dashboard Features
+# 📊 Dashboard Features
+**Core Analytics**
 
-### Core Analytics
-- Customer demographics and behavior analysis
-- Order patterns and sales trends  
-- Product performance metrics
-- Revenue and growth insights
+- KPIs Dashboard: Total Revenue, Orders, Customers, Product Counts with revenue trends and customer segmentation
+- Customer Analytics: Status distribution, segment spending, geographic spread
+- Product Analytics: Top products, price/stock distribution, category performance
+- Raw Data Explorer: Direct table access for all database entities
 
-### AI-Driven Insights
-- Automated business intelligence
-- Custom query interface
-- Data-driven recommendations
-- Interactive exploration tools
+# AI-Driven Insights
 
-### Data Quality Visualization
-- Before/after cleaning comparisons
-- Issue identification and resolution tracking
-- Data validation results
-
-## 🔧 Data Processing Pipeline
-
-### Raw Data Issues Addressed
-- **Multiple ID Systems**: Unified entity identification
-- **Inconsistent Naming**: Standardized column names
-- **Mixed Date Formats**: Converted to consistent datetime format
-- **Data Type Issues**: Proper type casting and validation
-- **Missing Relationships**: Established foreign key relationships
-- **Duplicate Fields**: Merged and cleaned redundant information
-- **Null Value Handling**: Strategic treatment of missing data
-- **Case Sensitivity**: Normalized text data
-
-### Database Schema
-The cleaned data is organized into a normalized schema:
-- **Customers**: Customer information and demographics
-- **Orders**: Order header information
-- **Order_Items**: Individual items within orders
-- **Products**: Product catalog and details
-
-## 📈 Results & Outcomes
-
-- **Data Quality**: Significant improvement in data consistency and completeness
-- **Performance**: Optimized database queries with proper indexing
-- **Insights**: Actionable business intelligence through interactive dashboard
-- **Scalability**: Modular design allows for easy extension to new data sources
+- LangChain + Gemini-2.0 Flash: AI-powered trend analysis and risk identification
+- Interactive Q&A: Business questions with structured prompts
+- Smart Recommendations: Customer segmentation and product optimization suggestions
 
 ## 🛠️ Technical Stack
 
@@ -192,7 +161,7 @@ The cleaned data is organized into a normalized schema:
 | `db/create_tables.py` | Database schema creation |
 | `db/insert_cleaned_data.py` | Data insertion with validation |
 | `app/dashboard.py` | Main Streamlit dashboard application |
-| `utils/profiling.py` | Data profiling and quality assessment |
+| `utils/summarise.py` | Data summarise and quality assessment |
 | `reports/` | Generated PDF reports on data quality |
 | `notebooks/` | Jupyter notebooks for analysis and validation |
 
@@ -206,12 +175,3 @@ This project includes comprehensive documentation:
 - **This README**: Quick start guide and project overview
 
 The `documentation.docx` file contains the detailed thought process behind every technical decision and should be reviewed to understand the complete solution approach.
-
-## 📞 Support
-
-For questions about this implementation or the data engineering challenge, please refer to the comprehensive documentation and analysis notebooks included in the project.
-
----
-
-**Developed for QuantifAI Data Engineering Challenge**  
-*Showcasing end-to-end data engineering capabilities*
