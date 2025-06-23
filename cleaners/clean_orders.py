@@ -48,7 +48,7 @@ def clean_orders_dataset(df):
 
 def remove_duplicate_columns(df):
     print("Removing duplicate columns...")
-    # 🧠 Keep `customer_id`, drop `cust_id` (reversed logic)
+    # Keep `customer_id`, drop `cust_id` (reversed logic)
     if 'cust_id' in df.columns:
         df = df.drop('cust_id', axis=1)
         print("  - Removed 'cust_id' column (duplicate of 'customer_id')")
@@ -202,7 +202,7 @@ def main():
 
     output_path = os.path.join(os.path.dirname(__file__), '..', 'cleaned', 'orders_cleaned_data.csv')
     cleaned_df.to_csv(output_path, index=False)
-    print("\n✅ Cleaned orders saved.")
+    print("\n Cleaned orders saved.")
 
     return cleaned_df
 

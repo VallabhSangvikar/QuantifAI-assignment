@@ -14,7 +14,6 @@ def clear_all_tables():
 
 clear_all_tables()
 
-# Assuming df_customers is your cleaned DataFrame
 file_path = os.path.join(os.path.dirname(__file__), '..', 'cleaned', 'customers_cleaned_data.json')
 df_customers = pd.read_json(file_path)
 
@@ -25,13 +24,11 @@ with sqlite3.connect("ecommerce.db") as conn:
 file_path = os.path.join(os.path.dirname(__file__), '..', 'cleaned', 'products_cleaned_data.json')
 df_products = pd.read_json(file_path)  # or use your DataFrame
 
-# Extract unique suppliers
 df_suppliers = df_products[['supplier_id']].dropna().drop_duplicates()
 
 with sqlite3.connect("ecommerce.db") as conn:
     df_suppliers.to_sql("suppliers", conn, if_exists="append", index=False)
 
-# Optional: drop 'item_id' if not required
 df_products = df_products.drop(columns=['item_id'], errors='ignore')
 
 with sqlite3.connect("ecommerce.db") as conn:
@@ -40,7 +37,7 @@ with sqlite3.connect("ecommerce.db") as conn:
 
 
 file_path = os.path.join(os.path.dirname(__file__), '..', 'cleaned', 'orders_cleaned_data.csv')
-df_orders_full = pd.read_csv(file_path)  # Or from your pipeline
+df_orders_full = pd.read_csv(file_path) 
 
 df_order_items=df_orders_full[['order_id','item_id', 'product_id', 'quantity', 'unit_price', 'total_amount']].drop_duplicates(subset=['order_id', 'item_id'])
 

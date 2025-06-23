@@ -83,9 +83,6 @@ def clean_customer_data(df):
     df_clean = _validate_age_consistency(df_clean)
     df_clean = df_clean.drop_duplicates(subset=['customer_id'], keep='first')
 
-    # 🔧 Future: Insert order integration checks here (FK match, order count)
-    # if orders_df is not None:
-    #     df_clean = enrich_with_orders(df_clean, orders_df)
 
     print("Step 6: Generating cleaning summary...")
     _generate_cleaning_summary(df, df_clean)
@@ -327,6 +324,6 @@ if __name__ == "__main__":
     file_path = os.path.join(os.path.dirname(__file__), '..', 'cleaned', 'customers_cleaned_data.json')
     df_cleaned.to_json(file_path, orient='records', indent=2)
 
-    print("\n✅ Cleaned data saved to 'customers_cleaned_data.json'")
+    print("\n Cleaned data saved to 'customers_cleaned_data.json'")
     print(df_cleaned.head())
 
