@@ -175,3 +175,19 @@ This project includes comprehensive documentation:
 - **This README**: Quick start guide and project overview
 
 The `documentation.docx` file contains the detailed thought process behind every technical decision and should be reviewed to understand the complete solution approach.
+
+
+## 📷 Few Dashboard Screenshots  
+
+### Main Dashboard
+![Executive Dashboard](screenshots/image.png)
+
+### AI-Powered Insights
+![AI Insights](screenshots/image-1.png)
+
+### Data Quality Metrics
+![Data Quality](screenshots/image-2.png)
+
+
+
+
